@@ -7,11 +7,13 @@ import com.shared.prices.tracker.infra.adapters.incoming.rest.dto.response.Compa
 import com.shared.prices.tracker.infra.adapters.incoming.rest.dto.response.CompanyResponseV1
 import com.shared.prices.tracker.infra.adapters.incoming.rest.dto.response.CompanySharePriceResponseV1
 
-fun Company.toResponse() = CompanyResponseV1(
-    companyData = CompanyDataV1(
-        id = id,
-        name = name
-    )
+fun List<Company>.toResponse() = CompanyResponseV1(
+    companies = this.map {
+        CompanyDataV1(
+            id = it.id,
+            name = it.name,
+        )
+    }
 )
 
 fun Company.toCompanySharePriseResponse() = CompanySharePriceResponseV1(

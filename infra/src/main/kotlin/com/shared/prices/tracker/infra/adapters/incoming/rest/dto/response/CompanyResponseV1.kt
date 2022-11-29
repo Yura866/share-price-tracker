@@ -1,7 +1,7 @@
 package com.shared.prices.tracker.infra.adapters.incoming.rest.dto.response
 
 data class CompanyResponseV1(
-    val companyData: CompanyDataV1,
+    val companies: List<CompanyDataV1>,
 )
 
 data class CompanyDataV1(

@@ -12,5 +12,5 @@ class CompanyController(
 ) {
     
     @GetMapping(Endpoint.GET_COMPANIES)
-    fun geCompanies() = handler.findAllCompanies().map { it.toResponse() }
+    fun geCompanies() = handler.findAllCompanies().toResponse()
 }
