@@ -1,0 +1,13 @@
+server.port: 8080
+
+spring:
+  data.mongodb.uri: mongodb://localhost:27017/company-share-prises
+  mongodb:
+    embedded:
+      version: 4.0.21
+
+
+logging:
+  level:
+    com.shared.prices.traker: DEBUG
+
